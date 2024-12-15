@@ -70,7 +70,7 @@ class EmotionDistributionApp:
 
 if __name__ == "__main__":
     # Specify the file path for your dataset
-    file_path = 'customer_id_sentiment_author_content.csv'
+    file_path = r'customer_id,sentiment,author,content.CSV'
 
     # Create an instance of the app and run it
     emotion_app = EmotionDistributionApp(file_path)
