@@ -58,7 +58,7 @@ class EmotionDistributionApp:
 
 if __name__ == "__main__":
     # Specify the file path for your dataset
-    file_path = r'D:\Daniyals project\customer_id,sentiment,author,content.CSV'
+    file_path = r'customer_id,sentiment,author,content.CSV'
 
     # Create an instance of the app and run it
     emotion_app = EmotionDistributionApp(file_path)
