@@ -12,7 +12,8 @@ class EmotionDistributionApp:
     def __init__(self, file_path, sample_size=100):
         self.file_path = file_path
         self.sample_size = sample_size
-        self.emotion_analyzer = pipeline('sentiment-analysis', model='arpanghoshal/EmoRoBERTa')
+        self.emotion_analyzer = pipeline('sentiment-analysis', model='distilbert-base-uncased')
+
 
     def load_data(self):
         try:
