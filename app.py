@@ -12,7 +12,7 @@ class EmotionDistributionApp:
     def __init__(self, file_path, sample_size=100):
         self.file_path = file_path
         self.sample_size = sample_size
-        self.emotion_analyzer = pipeline('sentiment-analysis', model='distilbert-base-uncased-finetuned-sst-2-english')
+        self.emotion_analyzer = pipeline('text-classification', model='j-hartmann/emotion-english-distilroberta-base')
 
     def load_data(self):
         try:
@@ -35,15 +35,7 @@ class EmotionDistributionApp:
         user_input = st.text_area('Enter text:', 'Product was amazing but packing was not up to the mark.')
         if st.button('Get Emotion'):
             result = self.emotion_analyzer(user_input)[0]
-            label_mapping = {
-                "LABEL_0": "Happy",
-                "LABEL_1": "Sad",
-                "LABEL_2": "Angry",
-                "LABEL_3": "Surprised",
-                "LABEL_4": "Fearful",
-                "LABEL_5": "Disgusted"
-            }
-            emotion = label_mapping.get(result['label'], result['label'])
+            emotion = result['label'].capitalize()
             st.write(f'Text Emotion: {emotion}')
 
     def display_sample_dataset(self, data):
