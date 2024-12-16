@@ -36,12 +36,12 @@ class EmotionDistributionApp:
         if st.button('Get Emotion'):
             result = self.emotion_analyzer(user_input)[0]
             label_mapping = {
-                "LABEL_0": "Negative",
-                "LABEL_1": "Neutral",
-                "LABEL_2": "Positive",
-                "LABEL_3": "Mixed",
-                "LABEL_4": "Angry",
-                "LABEL_5": "Sad"
+                "LABEL_0": "Happy",
+                "LABEL_1": "Sad",
+                "LABEL_2": "Angry",
+                "LABEL_3": "Surprised",
+                "LABEL_4": "Fearful",
+                "LABEL_5": "Disgusted"
             }
             emotion = label_mapping.get(result['label'], result['label'])
             st.write(f'Text Emotion: {emotion}')
