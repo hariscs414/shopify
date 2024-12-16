@@ -66,7 +66,7 @@ class EmotionDistributionApp:
         self.display_sample_dataset(sample_data)
         
         st.markdown("---")
-        st.write("**App created by:** Salar Khan Jadoon & Daniyal Khan Jadoon")
+        st.write("**App created by:** Salar Khan Jadoon & Daniyal Khan Jadon")
 
 if __name__ == "__main__":
     # Specify the file path for your dataset
